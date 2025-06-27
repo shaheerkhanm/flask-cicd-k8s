@@ -1,0 +1,40 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+*.env
+
+# Git and GitHub
+.git/
+.gitignore
+
+# Docker-related
+Dockerfile
+.dockerignore
+
+# Python tools
+.coverage
+.tox/
+.pytest_cache/
+tests/
+
+# OS and IDE files
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs and runtime
+*.log
+*.pid
+*.sqlite3
+
+# Node (if frontend included)
+node_modules/
