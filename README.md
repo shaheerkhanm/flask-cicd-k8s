@@ -52,7 +52,7 @@ Access app at: `http://localhost:5000/health`
 * Health check inside a container
 * Deployment to AWS EKS
 
-### 🐳 Docker Build & Run
+### Docker Build & Run
 
 ```bash
 docker build -t flask-cicd-app .

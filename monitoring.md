@@ -34,7 +34,7 @@ metrics = PrometheusMetrics(app)
 
 ---
 
-### 🔹 Health Check Monitoring
+### Health Check Monitoring
 
 Kubernetes provides basic health checks, but production-grade monitoring goes further:
 
@@ -85,7 +85,7 @@ Example alert rule:
 
 ---
 
-### 🔹 Logging
+### Logging
 
 Effective logging makes troubleshooting easier.
 
