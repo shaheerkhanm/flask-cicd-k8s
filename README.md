@@ -4,7 +4,7 @@ This repository contains a Flask application integrated with a fully automated C
 
 ---
 
-## 🚀 Project Features
+## Project Features
 
 * Flask-based microservice
 * Docker containerization
@@ -16,7 +16,7 @@ This repository contains a Flask application integrated with a fully automated C
 
 ---
 
-## 🧑‍💻 Local Development Setup
+## Local Development Setup
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ Access app at: `http://localhost:5000/health`
 
 ---
 
-## 🔁 CI/CD Pipeline Setup
+## CI/CD Pipeline Setup
 
 ### Trigger
 
@@ -61,7 +61,7 @@ docker run -d -p 5000:5000 flask-cicd-app
 
 ---
 
-### 🔐 GitHub Secrets Required
+### GitHub Secrets Required
 
 | Secret Name             | Description                     |
 | ----------------------- | ------------------------------- |
@@ -74,7 +74,7 @@ docker run -d -p 5000:5000 flask-cicd-app
 
 ---
 
-## ☘️ Kubernetes Deployment
+## Kubernetes Deployment
 
 ### Prerequisites
 
@@ -99,7 +99,7 @@ Visit the `EXTERNAL-IP` shown in browser: `http://<elb-endpoint>`
 
 ---
 
-## ✅ Monitoring & Observability
+## Monitoring & Observability
 
 Detailed documentation is available in [monitoring.md](./monitoring.md)
 
@@ -118,7 +118,7 @@ YAML examples for:
 
 ---
 
-## 🔒 Security & Best Practices
+## Security & Best Practices
 
 See full details in [security.md](./security.md)
 
@@ -133,7 +133,7 @@ Highlights:
 
 ---
 
-## 📆 Assumptions
+## Assumptions
 
 * Kubernetes cluster (EKS) is pre-created
 * GitHub secrets are correctly configured
@@ -142,7 +142,7 @@ Highlights:
 
 ---
 
-## ✅ Summary
+## Summary
 
 This project demonstrates end-to-end DevOps practices:
 

@@ -1,14 +1,14 @@
-## 📈 Monitoring & Observability
+## Monitoring & Observability
 
 This section explains how monitoring and observability are implemented for the Flask application deployed on Kubernetes.
 
 ---
 
-### 🔹 Basic Metrics
+### Basic Metrics
 
 To monitor application-level metrics like request count, response time, and error rate:
 
-#### ✅ Flask + Prometheus Exporter
+#### Flask + Prometheus Exporter
 
 * Integrate [`prometheus_flask_exporter`](https://github.com/rycus86/prometheus_flask_exporter) in the Flask application.
 * It exposes metrics at `/metrics` that Prometheus can scrape.
@@ -27,7 +27,7 @@ metrics = PrometheusMetrics(app)
   * Request duration (latency)
   * Exception count
 
-#### ✅ Optional: Grafana for Visualization
+#### Optional: Grafana for Visualization
 
 * Connect Prometheus as a data source to Grafana.
 * Create dashboards to track throughput, latency, and errors.
@@ -38,7 +38,7 @@ metrics = PrometheusMetrics(app)
 
 Kubernetes provides basic health checks, but production-grade monitoring goes further:
 
-#### ✅ Kubernetes Probes
+#### Kubernetes Probes
 
 Defined in your `deployment.yaml`:
 
@@ -58,12 +58,12 @@ readinessProbe:
   periodSeconds: 5
 ```
 
-#### ✅ External Health Checks
+#### External Health Checks
 
 * Use tools like **UptimeRobot**, **Pingdom**, or **StatusCake** to monitor the external LoadBalancer endpoint.
 * Useful for real-world availability checks.
 
-#### ✅ Prometheus Alerts (Optional)
+#### Prometheus Alerts (Optional)
 
 * Set up Prometheus Alertmanager to trigger alerts:
 
@@ -89,7 +89,7 @@ Example alert rule:
 
 Effective logging makes troubleshooting easier.
 
-#### ✅ Pod-Level Logging
+#### Pod-Level Logging
 
 * Flask logs to `stdout`, which is automatically captured by Kubernetes.
 * View logs via:
@@ -98,7 +98,7 @@ Effective logging makes troubleshooting easier.
 kubectl logs -l app=flask-app
 ```
 
-#### ✅ Optional: Centralized Logging
+#### Optional: Centralized Logging
 
 For production-grade observability, integrate:
 
@@ -117,6 +117,6 @@ Log architecture example:
 
 ---
 
-### 📁 Optional Separate File
+### Optional Separate File
 
 This content can be linked from the README or maintained as a standalone `monitoring.md` file for clarity and maintainability.

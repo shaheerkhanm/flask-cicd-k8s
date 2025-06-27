@@ -1,29 +1,29 @@
-## 🔒 Security & Best Practices
+## Security & Best Practices
 
 This section outlines security measures and best practices applied throughout the CI/CD and Kubernetes infrastructure.
 
 ---
 
-### 🏠 Image Security
+### Image Security
 
-#### ✅ Image Scanning
+#### Image Scanning
 
 * Enable automatic image scanning via Docker Hub or use tools like **Trivy** during CI to catch vulnerabilities.
 
-#### ✅ Private Image Repository
+#### Private Image Repository
 
 * Use Docker Hub private repos or AWS ECR to restrict unauthorized access to images.
 
 ---
 
-### ⚖️ IAM & RBAC Controls
+### IAM & RBAC Controls
 
-#### ✅ IAM Best Practices
+#### IAM Best Practices
 
 * Use IAM roles with least privilege for EKS and CI/CD pipeline.
 * Avoid long-lived static credentials.
 
-#### ✅ Kubernetes RBAC
+#### Kubernetes RBAC
 
 * Apply RBAC rules to limit access to deployments, logs, secrets.
 
@@ -43,13 +43,13 @@ rules:
 
 ---
 
-### 🔐 Secret Management
+### Secret Management
 
-#### ✅ GitHub Secrets
+#### GitHub Secrets
 
 * CI pipeline secrets are stored securely in GitHub Actions (`Settings > Secrets`).
 
-#### ✅ Kubernetes Secrets
+#### Kubernetes Secrets
 
 * Store API keys, DB passwords as `Secret` objects:
 
@@ -64,7 +64,7 @@ stringData:
 
 ---
 
-### 🚫 Network Policies
+### Network Policies
 
 * Restrict pod communication using Kubernetes `NetworkPolicy`.
 
@@ -91,14 +91,14 @@ spec:
 
 ---
 
-### ♻️ Auto-Rollbacks
+### Auto-Rollbacks
 
 * Use Kubernetes deployment strategies that support rollback on failure.
 * Monitor rollout status with `kubectl rollout status deployment/flask-app`
 
 ---
 
-### ✉️ Notifications (Optional)
+### Notifications (Optional)
 
 * Integrate GitHub Actions or Prometheus with Slack, Teams, or Email for deployment status alerts.
 
