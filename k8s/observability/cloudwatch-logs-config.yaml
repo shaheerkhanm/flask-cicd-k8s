@@ -1,0 +1,23 @@
+# cloudwatch-logs-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cwagentconfig
+  namespace: amazon-cloudwatch
+  labels:
+    app: cloudwatch-agent
+data:
+  cwagentconfig.json: |
+    {
+      "logs": {
+        "logs_collected": {
+          "kubernetes": {
+            "cluster_name": "my-cluster",
+            "log_group_name": "/eks/flask-app",
+            "log_stream_name": "{hostname}"
+          }
+        },
+        "force_flush_interval": 5
+      }
+    }
+    
