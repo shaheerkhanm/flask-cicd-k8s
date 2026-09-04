@@ -150,3 +150,6 @@ This project demonstrates end-to-end DevOps practices:
 * Secure Docker image builds with health checks
 * Kubernetes deployment with monitoring and logging
 * Clear separation of configuration and secrets
+
+
+<!-- Security scan triggered at 2026-09-04 14:23:32 -->
